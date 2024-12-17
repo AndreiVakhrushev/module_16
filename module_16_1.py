@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from fastapi.responses import JSONResponse
+
 # Создаем экземпляр приложения FastAPI
 app = FastAPI()
 # Создаем маршрут к главной странице - "/".
