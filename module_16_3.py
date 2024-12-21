@@ -28,7 +28,7 @@ async def update_message(user_id: Annotated[int, Path(ge=0)], user_name: str = P
     return f"Информация о пользователе id# {user_id} обновлена!"
 # delete запрос по маршруту '/user/{user_id}', который удаляет из словаря users по ключу user_id пару
 @app.delete("/user/{user_id}")
-async def delete_user(user_id: int = Path(...)):
+async def delete_user(user_id):
     if user_id in users:
         users.pop(user_id)
         return f"Пользователь с id# {user_id} удален."
